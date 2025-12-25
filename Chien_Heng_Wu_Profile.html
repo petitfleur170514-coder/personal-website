@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳建亨 Chien-heng Wu | Academic Profile</title>
+    <meta name="description" content="Associate Professor Chien-heng Wu's Academic Profile - National Tsing Hua University">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif TC', serif; }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        .tab-active { border-bottom: 2px solid #2563EB; color: #1E40AF; font-weight: 600; }
+        .tab-inactive { color: #6B7280; }
+        .tab-inactive:hover { color: #374151; }
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .avatar-placeholder { background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); color: #475569; text-shadow: 1px 1px 0px rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-slate-800 tracking-wider" id="nav-name">CHIEN-HENG WU</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 transition" id="nav-about">About</a>
+                    <a href="#research" class="text-slate-600 hover:text-blue-600 transition" id="nav-research">Research</a>
+                    <a href="#publications" class="text-slate-600 hover:text-blue-600 transition" id="nav-publications">Publications</a>
+                    <a href="#activities" class="text-slate-600 hover:text-blue-600 transition" id="nav-activities">Activities</a>
+                    <a href="#honors" class="text-slate-600 hover:text-blue-600 transition" id="nav-honors">Honors</a>
+                    <button onclick="toggleLanguage()" class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 transition flex items-center gap-2">
+                        <i class="fas fa-globe"></i> <span id="lang-btn-text">中文</span>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-600 hover:text-slate-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50" onclick="toggleMobileMenu()">About</a>
+                <a href="#research" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50" onclick="toggleMobileMenu()">Research</a>
+                <a href="#publications" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50" onclick="toggleMobileMenu()">Publications</a>
+                <a href="#activities" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50" onclick="toggleMobileMenu()">Activities</a>
+                <button onclick="toggleLanguage()" class="w-full text-left px-3 py-2 text-base font-medium text-blue-600 hover:bg-slate-50">Switch Language / 切換語言</button>
+            </div>
+        </div>
+    </nav>
+    <header class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto md:flex items-start gap-12">
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full avatar-placeholder flex items-center justify-center flex-shrink-0 overflow-hidden shadow-lg mx-auto md:mx-0 mb-6 md:mb-0 border-4 border-white">
+                <span class="text-4xl md:text-6xl font-serif font-bold tracking-widest">CW</span>
+            </div>
+            <div class="text-center md:text-left flex-grow">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-2" id="hero-name">Chien-heng Wu</h1>
+                <h2 class="text-xl text-blue-600 font-medium mb-4" id="hero-title">Associate Professor</h2>
+                <p class="text-slate-600 mb-6 text-lg" id="hero-dept">Department of Foreign Languages and Literature<br>National Tsing Hua University</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-slate-500">
+                    <a href="mailto:sinthome@gapp.nthu.edu.tw" class="flex items-center gap-2 hover:text-blue-600 transition"><i class="fas fa-envelope"></i> sinthome@gapp.nthu.edu.tw</a>
+                    <span class="flex items-center gap-2"><i class="fas fa-phone"></i> +886-3-571-5131 ext.42709</span>
+                    <a href="https://orcid.org/0009-0004-1859-4588" target="_blank" class="flex items-center gap-2 hover:text-blue-600 transition"><i class="fab fa-orcid"></i> ORCID</a>
+                    <a href="https://khub.nthu.edu.tw/researcherProfile?uuid=9e65cb1c-c16b-47cd-a2f1-76e2143599a3" target="_blank" class="flex items-center gap-2 hover:text-blue-600 transition"><i class="fas fa-university"></i> Knowledge Hub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+        <section id="about" class="scroll-mt-24 fade-in">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4" id="section-education">Education</h3>
+                    <ul class="space-y-6 relative border-l border-slate-200 ml-3" id="edu-list"></ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4" id="section-experience">Academic Employment</h3>
+                    <ul class="space-y-4" id="job-list"></ul>
+                </div>
+            </div>
+        </section>
+        <section id="research" class="scroll-mt-24 fade-in bg-white rounded-xl shadow-sm border border-slate-200 p-8">
+            <h3 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4 flex items-center gap-3"><i class="fas fa-search text-blue-500"></i><span id="section-research">Research Projects</span></h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                     <h4 class="font-bold text-lg text-slate-800 mb-4 pb-2 border-b border-slate-100" id="title-current-projects">Current Projects (MOE & NSTC)</h4>
+                     <ul class="space-y-3" id="current-projects-list"></ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-lg text-slate-800 mb-4 pb-2 border-b border-slate-100" id="title-other-projects">Teaching & Other Projects</h4>
+                     <ul class="space-y-3" id="other-projects-list"></ul>
+                     <h4 class="font-bold text-lg text-slate-800 mt-8 mb-4 pb-2 border-b border-slate-100 text-slate-500" id="title-past-projects">Past Projects</h4>
+                     <ul class="space-y-3 text-slate-600 text-sm" id="past-projects-list"></ul>
+                </div>
+            </div>
+        </section>
+        <section id="publications" class="scroll-mt-24 fade-in">
+            <h3 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4 flex items-center gap-3"><i class="fas fa-book text-blue-500"></i><span id="section-publications">Publications</span></h3>
+            <div class="flex border-b border-slate-200 mb-6 overflow-x-auto">
+                <button class="px-4 py-2 text-sm font-medium focus:outline-none transition-colors duration-200 tab-active whitespace-nowrap" onclick="switchTab('journal')" id="tab-journal">Journal Articles</button>
+                <button class="px-4 py-2 text-sm font-medium focus:outline-none transition-colors duration-200 tab-inactive whitespace-nowrap" onclick="switchTab('chapters')" id="tab-chapters">Book Chapters</button>
+                <button class="px-4 py-2 text-sm font-medium focus:outline-none transition-colors duration-200 tab-inactive whitespace-nowrap" onclick="switchTab('translation')" id="tab-translation">Translations</button>
+            </div>
+            <div id="pub-content" class="space-y-3"></div>
+        </section>
+        <section id="activities" class="scroll-mt-24 fade-in">
+             <h3 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4 flex items-center gap-3"><i class="fas fa-microphone-alt text-blue-500"></i><span id="section-activities">Academic Activities</span></h3>
+            <div class="flex border-b border-slate-200 mb-6 overflow-x-auto">
+                <button class="px-4 py-2 text-sm font-medium focus:outline-none transition-colors duration-200 tab-active whitespace-nowrap" onclick="switchActivityTab('conferences')" id="tab-conferences">Conference Presentations</button>
+                <button class="px-4 py-2 text-sm font-medium focus:outline-none transition-colors duration-200 tab-inactive whitespace-nowrap" onclick="switchActivityTab('talks')" id="tab-talks">Invited Talks & Lectures</button>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 h-[600px] overflow-y-auto custom-scrollbar">
+                <ul class="space-y-4" id="activities-list"></ul>
+            </div>
+        </section>
+        <section id="honors" class="scroll-mt-24 fade-in grid md:grid-cols-2 gap-8">
+            <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                <h4 class="font-bold text-lg text-blue-800 mb-4 flex items-center gap-2"><i class="fas fa-award"></i> <span id="section-honors">Honors & Awards</span></h4>
+                <div class="h-[400px] overflow-y-auto custom-scrollbar pr-2"><ul class="space-y-3 text-sm" id="honors-list"></ul></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-slate-200">
+                 <h4 class="font-bold text-lg text-slate-800 mb-4 flex items-center gap-2"><i class="fas fa-users-cog"></i> <span id="section-service">Professional Service</span></h4>
+                <div class="text-sm space-y-4 h-[400px] overflow-y-auto custom-scrollbar pr-2">
+                    <div><p class="font-semibold text-slate-700 mb-2" id="service-board">Board Membership:</p><ul class="list-disc list-inside text-slate-600 ml-2 space-y-1" id="board-list"></ul></div>
+                    <div><p class="font-semibold text-slate-700 mb-2 mt-4" id="service-committee">Committee & Consultation:</p><ul class="list-disc list-inside text-slate-600 ml-2 space-y-1" id="committee-list"></ul></div>
+                    <div><p class="font-semibold text-slate-700 mb-2 mt-4" id="service-reviewer">External Reviewer:</p><ul class="list-disc list-inside text-slate-600 ml-2 grid grid-cols-1 gap-1" id="reviewer-list"></ul></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-slate-800 text-slate-400 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2025 Chien-heng Wu. All Rights Reserved.</p>
+            <p class="text-xs mt-2">Department of Foreign Languages and Literature, National Tsing Hua University</p>
+        </div>
+    </footer>
+    <script>
+        const data = {
+            en: {
+                nav: { name: "CHIEN-HENG WU", about: "About", research: "Research", publications: "Publications", activities: "Activities", honors: "Honors" },
+                hero: { name: "Chien-heng Wu", title: "Associate Professor", dept: "Department of Foreign Languages and Literature<br>National Tsing Hua University" },
+                sections: { education: "Education", experience: "Academic Employment", research: "Research Projects", publications: "Publications", activities: "Academic Activities", honors: "Honors & Grants", service: "Professional Service" },
+                sectionTitles: { currentProjects: "Current Projects (MOE & NSTC)", otherProjects: "Teaching & Other Projects", pastProjects: "Past Projects", serviceBoard: "Board Membership:", serviceCommittee: "Committee & Consultation:", serviceReviewer: "External Reviewer:" },
+                education: [ { year: "2007 – 2013", degree: "Ph.D., Comparative Literature", school: "University of California, Los Angeles (UCLA), USA", note: "Dissertation: Toward a Politics of the Common: History, Subjectivity and Emancipation. Advisors: Kenneth Reinhard and Shu-mei Shih" }, { year: "2001 – 2005", degree: "M.A., Foreign Languages and Literatures", school: "National Taiwan University, Taiwan", note: "" }, { year: "1998 – 2001", degree: "B.A., Foreign Languages and Literature", school: "National Tsing Hua University, Taiwan", note: "" }, { year: "1993 – 1998", degree: "Associate Degree, English Department", school: "Wenzao Ursuline Junior College, Taiwan", note: "" } ],
+                jobs: [ { title: "Associate Professor", org: "National Tsing Hua University", year: "2022 Aug. – Present" }, { title: "Assistant Professor", org: "National Tsing Hua University", year: "2017 Aug. – 2022 Jul." }, { title: "Assistant Professor", org: "National Kaohsiung Normal University", year: "2014 Aug. – 2017 Jul." }, { title: "Assistant Professor", org: "National Tsing Hua University", year: "2014 Feb. – 2014 Jul." }, { title: "Postdoctoral Fellow", org: "National Sun Yat-sen University, College of Liberal Arts", year: "2013 Aug. – 2013 Oct." } ],
+                projects: { current: [ "2024-2025 MOE: Meeting Generative AI Halfway: Critical Thinking in the Age of Automated Learning", "2023-2024 MOE: Designing the Class Discussion Model on the Basis of Bernard Stiegler’s Concept of Hermeneutical Web", "2022-2026 NSTC: Thinking Politics in the Age of Post-Humanity: Prometheanism and the Commitment to Critique" ], other: [ "112-1 Deepening Digital Teaching: 'Introduction to Western Literature I'", "112-2 Deepening Digital Teaching: 'Introduction to Western Literature II'", "112-2 Innovative Teaching Grant: 'Introduction to Western Literature II'", "114-1 Innovative Teaching Grant: 'Literary Theory'" ], past: [ "2020-2023 MOST (Ta-You Wu Award): The Posthuman and Its Vicissitudes", "2017-2020 MOST: The Politics of Time and the Time of Politics: A Preliminary Investigation", "2016 NKNU Junior Faculty Research Grant" ] },
+                publications: { journal: [ "“Order out of Chaos: The Pharmacology of Cybernetics in The Posthuman Comedy.” Ex-Position 53 (2025): 27-50.", "“Between Distinction and Transformation: Possibilities and Challenges of Theorizing Taiwan.” Journal of Taiwan Literary Studies 40 (2025): 79-117. (in Chinese)", "“The Desire Called Neganthropology.” Ex-Position 50 (2023): 21-49.", "“The Question Concerning Generativity in Large Language Models.” Critical Asia Archive December Issue (2023).", "“Will the Real Taiwanese Subject Please Stand Up? On Critique, Radicalism, and the Question of Decolonization.” Taiwan Lit 3.2 (2022).", "“The Non-Relation of Relation: The Fold of Micro- and Macro-Politics in Foucault.” Chung Wai Literary Quarterly 50.3 (2021): 55-89. (in Chinese)", "“Badiou’s Nietzsche: Anti-Philosophy and Grand Politics.” Chung Wai Literary Quarterly 47.3 (2018): 21-56. (in Chinese)", "“Between Rupture and Consistency: Psychoanalyzing Politics or Politicizing Psychoanalysis?” Chung Wai Literary Quarterly 44.3 (2015): 140-176. (in Chinese)", "“Determining the Determination: Some Reflections on the Figure of Two in the Discourse of Emancipation.” Concentric: Literary and Cultural Studies, 41.2 (2015): 9-44.", "“Form-of-life between the Messianic As-Not and the Hypothetical As-If.” Concentric: Literary and Cultural Studies, 41.1 (2015): 9-40.", "“That Obscure Object (a) of Drive: The Politics of Negativity in Derrida and Žižek.” Concentric: Literary and Cultural Studies, 35.2 (2009): 69-102." ], chapters: [ "“Enjoy Your Sinophone.” Sinophone Studies Across Disciplines: A Reader. Ed. Howard Chiang and Shu-mei Shih. Columbia UP, 2024. 209-225.", "Appendix: Symposium on Transboundary Theory. Transboundary Theory, Taipei: Linking Publishing, 2023. 312-363. (in Chinese)", "“Untimely Meditations: The Contemporary, the Philosophy of Walking, and Related Ethical Matters in Remains of Life.” The Musha Incident: A Reader. Columbia UP, 2022. 149-176.", "“What is a Generation? Why Theory?” The Generation of Theory. Taipei: Showwe, 2020. 72-92. (in Chinese)", "“One Justice, Individual Articulations: Time, Archive, Writing.” Memory of Co-Regeneration. National Taiwan Museum of Fine Arts, 2018. 245-272. (in Chinese)", "“‘Tiger’s Leap into the Past’: Comparative Temporality and the Politics of Redemption in The Orphan of Asia.” Comparatizing Taiwan. Routledge, 2015. 33-58." ], translation: [ "Shih, Shu-mei. “The Concept of the Sinophone.” Journal of Malaysian Chinese Studies 14 (2011): 41-55.", "Shih, Shu-mei. “What is Sinophone Studies?” Wenshan Review 9.2 (2016): 105-123. (Co-translated)" ] },
+                activities: { conferences: [ "2025 Nov. 08. “Towards a New Image of Promethean Thought.” NSTC Research Project Presentation, NCCU. (in Chinese)", "2024 Dec. 08. “Why Prometheus Should Not Accelerate Gaia? From Planetary Technology to Post-Cybernetic Planetary Thinking.” Worlding Taiwan Conference, NCHU. (in Chinese)", "2024 Oct. 19-20. “Between Distinction and Transformation: Reflections on the Construction of Taiwanese Subjectivity.” NTNU. (in Chinese)", "2022 June 16-18. “One More Step: The Promises and Perils of Left Prometheanism.” ACLA Annual Meeting.", "2022 June 16. “Will the Real Taiwanese Subject Please Stand Up?” ACLA Pre-Conference Seminar.", "2022 June 15. “Speed, Disaster: An Analysis from Stiegler and Accelerationism.” 44th CLA Annual Meeting 'Speed Shambles', NTNU. (in Chinese)", "2020 Sep. 19. “Politics of Aspects: The Fold of Micro/Macro in Foucault.” 42nd CLA Annual Meeting 'Micro-relations', Academia Sinica. (in Chinese)", "2019 Apr. 12-13. “Enjoy Your Sinophone! Current Debate and the Path Forward.” Sinophone Studies, UCLA.", "2019 Mar. 23-24. “What is Generation? Why Theory?” Symposium in Honor of Prof. Ping-hui Liao, NTU. (in Chinese)", "2019 Mar. 08. “Human/Exceeding Human: Algorithmic Governmentality and the Future of Subject.” MOST Project Presentation, CCU. (in Chinese)", "2017 Oct. 09-11. “Untimely Meditations: The Contemporary... in Remains of Life.” Musha 1930, UCLA.", "2017 Nov. 18-19. “One Justice, Individual Articulations: Time, Archive, Writing.” NTMoFA. (in Chinese)", "2015 Oct. 02-05. “I am one who waits: Heidegger’s Being and Fanon’s Time.” Waiting: Time/Theory/Action, NCHU.", "2015 June 21-23. “Between Rupture and Consistency: Psychoanalyzing Politics or Politicizing Psychoanalysis?” Affect, Politics, Psychoanalysis, NTU.", "2012 Sept. 30. “Cultural Politics qua contradictio in adiecto? Alain Badiou and the Question of Culture.” Academia Sinica.", "2012 July 11-13. “Beyond Finitude: From a Dismembered Body to a Subjectivizable Body in Li Ang’s Visible Ghosts.” Contemporary Women’s Writing, NTU.", "2011 Mar. 31. “From Critique of Ideology to Jargon of Authenticity: The Other Question in Wuhe’s Remains of Life.” AAS-ICAS, Honolulu.", "2011 Jan. 21-24. “Tiger’s Leap into the Past: The Orphan of Asia and the Politics of Redemption.” Comparatizing Taiwan, UCLA/UCSD." ], talks: [ "2025 Jun. 06. “Generativity in LLMs: From Calvino’s Cybernetics and Ghosts.” Feng Chia University.", "2025 May 17. “Composition of Digital and Analog.” 47th CLA Annual Meeting, NCKU.", "2025 Mar. 21. Guest Lecture, “Digital and Theory,” NTU.", "2025 Mar. 14. Guest Lecture, “Digital and Theory,” NTU.", "2025 Feb 15-16. “AI and its Externalities: Digital Translation of Labor and Affect.” Soochow University.", "2024 Dec. 13-15. “Forcing the Choice: The Missing Political Affect in Yuk Hui’s Planetary Thinking.” Asia Theories Network, NTU.", "2024 Jun. 21-22. “From Critique of Computation to Critical Computation: Abduction as a Logic of Fictioning.” Asia Theories Network, NTU.", "2024 Apr. 27. “Fox and Hedgehog: Analog and Digital.” NSYSU.", "2023 Jul. 13. “Sinophone Studies and Its (Dis)contents.” Guest Lecture for Prof. Shu-mei Shih, NTNU.", "2023 Apr. 29. “The Re-Enchantment of the World: The Neganthropocene and the Political Categorical Imperative.” NTNU.", "2023 Feb. 11. “Origin Stories: Human, Technology and Alternative Imagination of Digital Tech.” NTNU.", "2022 Nov. 03. Moderator/Discussant, “Transboundary Theory” Lecture by Prof. Shu-mei Shih, NCCU (Webex).", "2022 Jan. 28. “Mirroring Chile: Thinking of ‘Another Future’.” Chung Wai Literary Blog.", "2022 Jan. 21. “Advent” Reading Group (Cybernetic Revolutionaries), NTU.", "2021 Nov. 02. “The Promises and Perils of Left Prometheanism.” NTNU English Talk.", "2021 May 18. “Do the Right Thing or Do Things Right.” Chung Wai Literary Blog.", "2021 Mar. 27. “Critique as New Intelligence.” MOST Literature II Workshop, NTU.", "2020 Mar. 25. “Nietzsche and Nihilism.” Kuandu Lecture, TNUA.", "2019 Dec. 11. “The Vicissitudes of the Posthuman.” NTHU iPhD Seminar.", "2019 Nov. 09. Discussant, 42nd CLA Annual Meeting Pre-forum, NTU.", "2019 Nov. 16. “Mediation” Reading Group (Mark B.N. Hansen), NTU.", "2019 Sep. 27. MOST Project Writing Workshop: Sharing Experience.", "2019 Sept. Editor, Taiwan Humanities Society Newsletter (Memory - Hong Kong).", "2019 May 31. “Event and World” Workshop, NSYSU.", "2019 Mar. “Theory, Critique, Thinking.” MOST Humanities & Social Sciences Newsletter 20.2.", "2019 Jan. 17-18. “Biopolitics, or Life/Politics: Foucault and Badiou.” THS Theory Camp, NTNU.", "2017 June. Editor, Taiwan Humanities Society Newsletter (Disaster, Space, Memory).", "2016 Sept. 02. “Political Politics of Debt.” THS Theory Camp, NTNU.", "2015 Sept. 25. “I am one who waits: Heidegger’s Being and Fanon’s Time.” Taiwan Humanities Society, NTU.", "2015 June 05. Respondent, Symposium on Asian American Literature, NKNU.", "2015 Jan. 22-23. Discussant, THS Theory Camp “Movement”, NTUA.", "2014 Sept. 27. Badiou Reading Group: The Rebirth of History, NCTU.", "2014 Jun. 23. Discussant, “The Form-of-Life” Conference, NTNU.", "2014 May 27. “Thinking Violence, Reading Violence.” NTNU.", "2014 May 02. “Man Thinks, Where are Things: Ontological Turn in Cont. Euro. Phil.” CLA, NCKU." ] },
+                honors: [ "2026 NTHU Ching-Jing Distinguished Talent Chair", "2018-Present NTHU Faculty Merit Pay Recipient", "2025 NTHU Talent Development Fund Academic Research Award", "2019 NTHU Junior Research Award", "2018 Ta-You Wu Memorial Award (NSTC)", "2016 NKNU Junior Faculty Research Grant", "2015 NKNU Distinguished Research Award", "2012 – 2013 Dissertation Year Fellowship, UCLA", "2012 Summer Fellowship, UCLA Dept. of Comparative Literature", "2011 – 2012 Chiang Ching-kuo Foundation Doctoral Fellowship", "2011 Lenart Pre-Dissertation Fellowship, UCLA", "2011 Summer Fellowship, UCLA Dept. of Comparative Literature", "2009 – 2010 Study Abroad Scholarship, Ministry of Education, Taiwan", "2008 Summer Fellowship, UCLA Dept. of Comparative Literature", "2007 – 2008 Fulbright Scholarship" ],
+                service: { boards: [ "Concentric: Literary and Cultural Studies (Editorial Board, 2023-2025)", "Review of English and American Literature (Editorial Board, 2024-2025)", "Comparative Literature Association of ROC (Board Member)", "Taiwan Humanities Society (Board Member, 3rd, 6th, 7th, 8th terms)" ], committee: [ "MOST Research Project Reviewer", "MOE Study Abroad Scholarship Reviewer", "MOE Study Abroad Scholarship Exam Committee", "2022 MOST Consultation Committee (Fantasy Literature in Education)", "2022 THS Annual Meeting 'Trauma' Organizing Committee", "2020 THS Theory Camp 'Suà' Organizing Committee", "2018 Tainan Girls' High School Gifted Program Reviewer" ], reviewer: [ "Journal of Taiwan Literary Studies", "Concentric: Literary and Cultural Studies", "Chung Wai Literary Quarterly", "Ex-Position", "Journal of Life Education", "Journal of European and American Studies", "NTU Studies in Language and Literature", "Review of English and American Literature", "Sun Yat-sen Journal of Humanities", "Tamkang Review" ] }
+            },
+            zh: {
+                nav: { name: "吳建亨", about: "關於", research: "研究", publications: "著作", activities: "學術活動", honors: "榮譽" },
+                hero: { name: "吳建亨", title: "副教授", dept: "國立清華大學 外國語文學系" },
+                sections: { education: "學歷", experience: "學術經歷", research: "研究計畫", publications: "學術著作", activities: "學術活動", honors: "獲獎與榮譽", service: "專業服務" },
+                sectionTitles: { currentProjects: "目前執行計畫 (教育部 & 國科會)", otherProjects: "教學實踐與其他計畫", pastProjects: "過往研究計畫", serviceBoard: "編輯委員與學會理監事：", serviceCommittee: "委員會與諮詢委員：", serviceReviewer: "期刊論文審查：" },
+                education: [ { year: "2007 – 2013", degree: "博士, 比較文學", school: "加州大學洛杉磯分校 (UCLA)", note: "論文：Toward a Politics of the Common: History, Subjectivity and Emancipation。指導教授：Kenneth Reinhard, 史書美" }, { year: "2001 – 2005", degree: "碩士, 外國語文學系", school: "國立台灣大學", note: "" }, { year: "1998 – 2001", degree: "學士, 外國語文學系", school: "國立清華大學", note: "" }, { year: "1993 – 1998", degree: "副學士, 英文科", school: "文藻外語專科學校", note: "" } ],
+                jobs: [ { title: "副教授", org: "國立清華大學", year: "2022 八月 – 至今" }, { title: "助理教授", org: "國立清華大學", year: "2017 八月 – 2022 七月" }, { title: "助理教授", org: "國立高雄師範大學", year: "2014 八月 – 2017 七月" }, { title: "助理教授", org: "國立清華大學", year: "2014 二月 – 2014 七月" }, { title: "博士後研究員", org: "國立中山大學文學院", year: "2013 八月 – 2013 十月" } ],
+                projects: { current: [ "2024-2025 教育部：與生成式AI折衷相遇：自動化學習時代的批判思考", "2023-2024 教育部：以斯蒂格勒的詮釋網概念設計課堂討論模式", "2022-2026 國科會2030優秀年輕學者計畫：後人類時代的政治思考：普羅米修斯主義與批判的承諾" ], other: [ "112學年度第一學期 深化數位教學：「西洋文學概論一」", "112學年度第二學期 深化數位教學：「西洋文學概論二」", "112學年度第二學期 教師創新教學補助計畫：「西洋文學概論二」", "114學年度第一學期 教師創新教學補助計畫：「文學理論」" ], past: [ "2020-2023 科技部吳大猷獎研究計畫：後人類與其變異", "2017-2020 科技部：初探時間的政治與政治的時間", "2016 國立高雄師範大學學術研究計畫補助" ] },
+                publications: { journal: [ "“Order out of Chaos: The Pharmacology of Cybernetics in The Posthuman Comedy.” Ex-Position 53 (2025): 27-50.", "〈「辨」與「變」之間：初探理論（化）台灣的可能與挑戰〉《台灣文學研究學報》40 (2025): 79-117。", "“The Desire Called Neganthropology.” Ex-Position 50 (2023): 21-49.", "“The Question Concerning Generativity in Large Language Models.” Critical Asia Archive December Issue (2023).", "“Will the Real Taiwanese Subject Please Stand Up? On Critique, Radicalism, and the Question of Decolonization.” Taiwan Lit 3.2 (2022).", "〈非關係之關係：論傅柯權力分析中微觀與巨觀的皺摺與辯證復振的可能〉《中外文學》50.3 (2021): 55-89。", "〈巴迪烏的尼采：反哲學與大政治〉《中外文學》47.3 (2018): 21-56。", "〈斷裂與持恆：精神分析化政治或政治化精神分析？〉《中外文學》44.3 (2015): 140-176。", "“Determining the Determination: Some Reflections on the Figure of Two in the Discourse of Emancipation.” Concentric 41.2 (2015): 9-44.", "“Form-of-life between the Messianic As-Not and the Hypothetical As-If.” Concentric 41.1 (2015): 9-40.", "“That Obscure Object (a) of Drive: The Politics of Negativity in Derrida and Žižek.” Concentric 35.2 (2009): 69-102." ], chapters: [ "“Enjoy Your Sinophone.” Sinophone Studies Across Disciplines: A Reader. Columbia UP, 2024. 209-225.", "〈附錄：《跨界理論》座談會〉《跨界理論》，台北：聯經出版社，2023. 312-363。", "“Untimely Meditations: The Contemporary... in Remains of Life.” The Musha Incident: A Reader. Columbia UP, 2022. 149-176.", "〈何為世代？為何理論？〉《理論的世代：廖朝陽教授榮退紀念論文集》，台北：秀威，2020. 72-92。", "〈一種正義，各自表述：時間、檔案、書寫〉《共再生的記憶》，國美館，2018. 245-272。", "“‘Tiger’s Leap into the Past’... in The Orphan of Asia.” Comparatizing Taiwan. Routledge, 2015. 33-58." ], translation: [ "史書美。〈華語語系的概念〉。《馬來西亞華人研究學刊》14 (2011): 41-55。", "史書美。〈何謂華語語系研究？〉（合譯）。《文山評論》9.2 (2016): 105-123。" ] },
+                activities: { conferences: [ "2025 Nov. 08. 〈朝向新的普羅米修斯思想圖像〉，國科會人文處文學二學門第八屆專題研究計畫成果發表會，政大。", "2024 Dec. 08. 〈『為什麼普羅米修斯不該速援蓋婭？』：從技術行星化到後模控學的行星思維〉，Worlding Taiwan 國際學術研討會，中興大學。", "2024 Oct. 19-20. 〈辨與變之間：台灣主體性建構的幾點思考〉，「台灣哲學與文學文化的交涉」國際研討會，師大。", "2022 June 16-18. “One More Step: The Promises and Perils of Left Prometheanism.” ACLA Annual Meeting.", "2022 June 16. “Will the Real Taiwanese Subject Please Stand Up?” ACLA Pre-Conference Seminar.", "2022 June 15. 〈速度、災難：從斯蒂格勒與加速主義觀點分析〉，第四十四屆中華民國比較文學學會年會「速度災難」，師大。", "2020 Sep. 19. 〈政治面面「關」：論傅柯權力分析中微觀與巨觀的皺褶與辯證復振的可能〉，第四十二屆比較文學學會年會，中研院。", "2019 Apr. 12-13. “Enjoy Your Sinophone! Current Debate and the Path Forward.” Sinophone Studies, UCLA.", "2019 Mar. 23-24. 〈何為世代？為何理論？〉「理論世代」：廖朝陽教授榮退研討會，台大。", "2019 Mar. 08. 〈人異／溢於人：演算法治理術與主體的未來〉，科技部人文司外文學門第六屆專題發表會，中正大學。", "2017 Oct. 09-11. “Untimely Meditations: The Contemporary... in Remains of Life.” Musha 1930, UCLA.", "2017 Nov. 18-19. 〈一種正義，各自表述：時間、檔案、書寫〉，共再生的記憶：重建臺灣藝術史學術研討會，國美館。", "2015 Oct. 02-05. “I am one who waits: Heidegger’s Being and Fanon’s Time.” Waiting: Time/Theory/Action, NCHU.", "2015 June 21-23. “Between Rupture and Consistency: Psychoanalyzing Politics or Politicizing Psychoanalysis?” Affect, Politics, Psychoanalysis, NTU.", "2012 Sept. 30. “Cultural Politics qua contradictio in adiecto? Alain Badiou and the Question of Culture.” Academia Sinica.", "2012 July 11-13. “Beyond Finitude: From a Dismembered Body to a Subjectivizable Body in Li Ang’s Visible Ghosts.” Contemporary Women’s Writing, NTU.", "2011 Mar. 31. “From Critique of Ideology to Jargon of Authenticity: The Other Question in Wuhe’s Remains of Life.” AAS-ICAS, Honolulu.", "2011 Jan. 21-24. “Tiger’s Leap into the Past: The Orphan of Asia and the Politics of Redemption.” Comparatizing Taiwan, UCLA/UCSD." ], talks: [ "2025 Jun. 06. 〈大型語言模型中的「生成性」問題：從卡爾維諾《模控學與鬼魂》談起〉，逢甲大學。", "2025 May 17. 〈數位與類比的構置〉，第四十七屆中華民國比較文學年會圓桌，成功大學。", "2025 Mar. 21. 客座講座，「數位與理論」，台灣大學。", "2025 Mar. 14. 客座講座，「數位與理論」，台灣大學。", "2025 Feb 15-16. 〈人工智慧與其外部性：勞動與情動的數位轉譯〉，台灣人文學社理論營，東吳大學。", "2024 Dec. 13-15. “Forcing the Choice: The Missing Political Affect in Yuk Hui’s Planetary Thinking.” Asia Theories Network, 台灣大學。", "2024 Jun. 21-22. “From Critique of Computation to Critical Computation.” Asia Theories Network, 台灣大學。", "2024 Apr. 27. 〈狐狸與刺蝟—類比與數位：《後人間喜劇》的模控學革命〉，中山大學。", "2023 Jul. 13. 〈華語語系與其不滿〉，師大史書美教授暑期課程客座。", "2023 Apr. 29. 「世界的復魅：負人類世與政治的定言令式」，師大「反思人類世」工作坊。", "2023 Feb. 11. 〈起源的故事：人類、技術與當代數位科技的另類想像〉，台灣人文學社理論營，師大。", "2022 Nov. 03. 史書美教授《跨界理論》講座，座談會招集人、主持人暨與談人，Webex。", "2022 Jan. 28. 〈借鏡智利：對「另一種未來」的思考〉，《觸外》中外文學部落格。", "2022 Jan. 21. 「降臨」研讀班，導讀 Cybernetic Revolutionaries，台灣大學。", "2021 Nov. 02. “The Promises and Perils of Left Prometheanism.” NTNU English Talk.", "2021 May 18. “Do the Right Thing or Do Things Right.” 《觸外》中外文學部落格。", "2021 Mar. 27. 「批判作為新智能」，科技部文學二學門研習營，台灣大學。", "2020 Mar. 25. 關渡講座：「尼采與虛無主義」，北藝大。", "2019 Dec. 11. “The Vicissitudes of the Posthuman.” 清大 iPhD Seminar.", "2019 Nov. 09. Discussant, 42nd CLA Annual Meeting Pre-forum, NTU.", "2019 Nov. 16. 「媒介」研讀班，導讀 Feed-Forward，台灣大學。", "2019 Sep. 27. 科技部專題研究計畫寫作工作坊（人文場）：青年學者學術經驗分享。", "2019 Sept. 台灣人文學社通訊〈「記憶時代—香港」專輯〉編輯。", "2019 May 31. 「事件與世界」工作坊，中山大學。", "2019 Mar. 《科技部人文與社會科學簡訊》20.2 〈理論、批判、思考〉。", "2019 Jan. 17-18. 「生命政治，或，生命／政治：從傅柯談起，以巴迪烏為例」，台灣人文學社理論營，師大。", "2017 June. 台灣人文學社通訊09 〈「災難、空間與記憶」專輯〉編輯。", "2016 Sept. 02. 「債的時間政治」，台灣人文學社理論營，師大。", "2015 Sept. 25. “I am one who waits: Heidegger’s Being and Fanon’s Time.” 台灣人文學社，台大。", "2015 June 05. NKNU Symposium on Asian American Literature, respondent.", "2015 Jan. 22-23. 台灣人文學社理論營「運動」，與談人，台藝大。", "2014 Sept. 27. Badiou Reading Group: The Rebirth of History, 交大。", "2014 Jun. 23. Discussant, “The Form-of-Life” Conference, NTNU.", "2014 May 27. “Thinking Violence, Reading Violence.” 師大。", "2014 May 02. 「人思，物何在：當代歐陸哲學的本體轉向」，成大。" ] },
+                honors: [ "2026 114年清華清鏡傑出人才講座", "2018-Present 國立清華大學彈性薪資獎勵", "2025 國立清華大學傑出人才發展基金學術研究獎", "2019 國立清華大學第二十二屆新進人員研究獎", "2018 吳大猷先生紀念獎", "2016 國立高雄師範大學學術研究計畫補助", "2015 國立高雄師範大學研究優良獎勵", "2012 – 2013 Dissertation Year Fellowship, UCLA", "2012 Summer Fellowship, UCLA Dept. of Comparative Literature", "2011 – 2012 Chiang Ching-kuo Foundation Doctoral Fellowship (蔣經國基金會博士論文獎學金)", "2011 Lenart Pre-Dissertation Fellowship, UCLA", "2011 Summer Fellowship, UCLA Dept. of Comparative Literature", "2009 – 2010 Study Abroad Scholarship, Ministry of Education, Taiwan (教育部留學獎學金)", "2008 Summer Fellowship, UCLA Dept. of Comparative Literature", "2007 – 2008 Fulbright Scholarship (傅爾布萊獎助學金)" ],
+                service: { boards: [ "《同心圓》 Concentric: Literary and Cultural Studies (編輯委員，2023-2025)", "《英美文學評論》 (編輯委員，2024-2025)", "中華民國比較文學學會 (理事)", "台灣人文學社 (第三、六、七、八屆理事)" ], committee: [ "科技部研究計畫審查委員", "教育部留學獎學金審查委員", "教育部留學獎學金命題委員", "2022 科技部人社中心「我國人文教育中奇幻文學之推動」計畫諮詢委員", "2022 台灣人文學社年會「創／傷」籌辦委員", "2020 台灣人文學社理論營「紲」籌備委員", "2018 台南女中資優鑑定「英語文能力評量」審題委員" ], reviewer: [ "《台灣文學研究學報》 Journal of Taiwan Literary Studies", "《同心圓》 Concentric: Literary and Cultural Studies", "《中外文學》 Chung Wai Literary Quarterly", "Ex-Position （原《臺大語言與文學研究》）", "《生命教育研究》 Journal of Life Education", "《歐美研究》 Journal of European and American Studies", "《臺大語言與文學研究》 NTU Studies in Language and Literature", "《英美文學評論》 Review of English and American Literature", "《中山人文學報》 Sun Yat-sen Journal of Humanities", "《淡江評論》 Tamkang Review" ] }
+            }
+        };
+        let currentLang = 'zh'; let activeTab = 'journal'; let activeActivityTab = 'conferences';
+        function render() {
+            const content = data[currentLang];
+            document.getElementById('nav-name').innerText = content.nav.name;
+            document.getElementById('nav-about').innerText = content.nav.about;
+            document.getElementById('nav-research').innerText = content.nav.research;
+            document.getElementById('nav-publications').innerText = content.nav.publications;
+            document.getElementById('nav-activities').innerText = content.nav.activities;
+            document.getElementById('nav-honors').innerText = content.nav.honors;
+            document.getElementById('lang-btn-text').innerText = currentLang === 'en' ? '中文' : 'English';
+            document.getElementById('hero-name').innerText = content.hero.name;
+            document.getElementById('hero-title').innerText = content.hero.title;
+            document.getElementById('hero-dept').innerHTML = content.hero.dept;
+            document.getElementById('section-education').innerText = content.sections.education;
+            document.getElementById('section-experience').innerText = content.sections.experience;
+            document.getElementById('section-research').innerText = content.sections.research;
+            document.getElementById('section-publications').innerText = content.sections.publications;
+            document.getElementById('section-activities').innerText = content.sections.activities;
+            document.getElementById('section-honors').innerText = content.sections.honors;
+            document.getElementById('section-service').innerText = content.sections.service;
+            document.getElementById('title-current-projects').innerText = content.sectionTitles.currentProjects;
+            document.getElementById('title-other-projects').innerText = content.sectionTitles.otherProjects;
+            document.getElementById('title-past-projects').innerText = content.sectionTitles.pastProjects;
+            document.getElementById('service-board').innerText = content.sectionTitles.serviceBoard;
+            document.getElementById('service-committee').innerText = content.sectionTitles.serviceCommittee;
+            document.getElementById('service-reviewer').innerText = content.sectionTitles.serviceReviewer;
+            document.getElementById('tab-journal').innerText = currentLang === 'en' ? 'Journal Articles' : '期刊論文';
+            document.getElementById('tab-chapters').innerText = currentLang === 'en' ? 'Book Chapters' : '專書章節';
+            document.getElementById('tab-translation').innerText = currentLang === 'en' ? 'Translations' : '翻譯';
+            document.getElementById('tab-conferences').innerText = currentLang === 'en' ? 'Conference Presentations' : '研討會發表';
+            document.getElementById('tab-talks').innerText = currentLang === 'en' ? 'Invited Talks & Lectures' : '受邀演講與座談';
+            const eduList = content.education.map(e => `<li class="pl-6 relative"><span class="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-white"></span><div class="text-sm text-blue-600 font-semibold">${e.year}</div><div class="font-bold text-slate-800 text-lg">${e.degree}</div><div class="text-slate-600">${e.school}</div>${e.note ? `<div class="text-sm text-slate-500 mt-1 italic">${e.note}</div>` : ''}</li>`).join('');
+            document.getElementById('edu-list').innerHTML = eduList;
+            const jobList = content.jobs.map((j, index) => `<li class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 ${index > 0 ? 'opacity-90' : ''}"><div class="flex justify-between items-start"><div><div class="font-bold text-slate-800">${j.title}</div><div class="text-slate-600">${j.org}</div></div>${index === 0 ? '<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">' + (currentLang === 'en' ? 'Current' : '現職') + '</span>' : ''}</div><div class="text-sm text-slate-400 mt-1">${j.year}</div></li>`).join('');
+            document.getElementById('job-list').innerHTML = jobList;
+            document.getElementById('current-projects-list').innerHTML = content.projects.current.map(p => `<li class="flex gap-2"><i class="fas fa-caret-right text-blue-500 mt-1.5 flex-shrink-0"></i><span>${p}</span></li>`).join('');
+            document.getElementById('other-projects-list').innerHTML = content.projects.other.map(p => `<li class="flex gap-2"><i class="fas fa-chalkboard-teacher text-green-500 mt-1.5 flex-shrink-0"></i><span>${p}</span></li>`).join('');
+            document.getElementById('past-projects-list').innerHTML = content.projects.past.map(p => `<li class="flex gap-2"><i class="fas fa-check text-slate-400 mt-1.5 flex-shrink-0"></i><span>${p}</span></li>`).join('');
+            document.getElementById('honors-list').innerHTML = content.honors.map(h => `<li class="flex gap-3"><i class="fas fa-medal text-yellow-500 mt-1 flex-shrink-0"></i><span>${h}</span></li>`).join('');
+            document.getElementById('board-list').innerHTML = content.service.boards.map(b => `<li>${b}</li>`).join('');
+            document.getElementById('committee-list').innerHTML = content.service.committee.map(b => `<li>${b}</li>`).join('');
+            document.getElementById('reviewer-list').innerHTML = content.service.reviewer.map(b => `<li>${b}</li>`).join('');
+            renderPublications();
+            renderActivities();
+        }
+        function toggleLanguage() { currentLang = currentLang === 'en' ? 'zh' : 'en'; render(); }
+        function switchTab(tab) { activeTab = tab; ['journal', 'chapters', 'translation'].forEach(t => { const el = document.getElementById(`tab-${t}`); if (t === tab) { el.classList.remove('tab-inactive'); el.classList.add('tab-active'); } else { el.classList.add('tab-inactive'); el.classList.remove('tab-active'); } }); renderPublications(); }
+        function switchActivityTab(tab) { activeActivityTab = tab; ['conferences', 'talks'].forEach(t => { const el = document.getElementById(`tab-${t}`); if (t === tab) { el.classList.remove('tab-inactive'); el.classList.add('tab-active'); } else { el.classList.add('tab-inactive'); el.classList.remove('tab-active'); } }); renderActivities(); }
+        function renderPublications() { const pubs = data[currentLang].publications[activeTab]; const container = document.getElementById('pub-content'); container.innerHTML = pubs.map((pub, index) => `<div class="p-3 bg-white rounded-lg border border-slate-100 shadow-sm hover:shadow-md transition-shadow fade-in" style="animation-delay: ${index * 0.03}s"><p class="text-slate-700 leading-relaxed pl-4 -indent-4 text-sm">${pub}</p></div>`).join(''); }
+        function renderActivities() { const acts = data[currentLang].activities[activeActivityTab]; const container = document.getElementById('activities-list'); container.innerHTML = acts.map((act, index) => `<li class="pb-3 border-b border-slate-200 last:border-0 fade-in" style="animation-delay: ${index * 0.02}s"><div class="text-slate-700 text-sm flex gap-3"><i class="fas ${activeActivityTab === 'conferences' ? 'fa-user-friends' : 'fa-comment-alt'} text-slate-300 mt-1 flex-shrink-0"></i><span>${act}</span></div></li>`).join(''); }
+        function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden'); }
+        document.addEventListener('DOMContentLoaded', () => { render(); });
+    </script>
+</body>
+</html>
+    
